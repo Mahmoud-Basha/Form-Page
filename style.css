@@ -1,117 +1,57 @@
-*{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-    text-decoration: none;
 }
-body{
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(./nasa-Q1p7bh3SHj8-unsplash.jpg) no-repeat ;
-    background-size: cover;
+    background: url('nasa-Q1p7bh3SHj8-unsplash.jpg') no-repeat center/cover fixed;
+    color: white;
+}
 
-    
-}
-.wrapper{
-    width: 420px;
-    background: transparent;
-    border: 2px solid rgb(255, 255, 255, .2);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 10px rgb(0, 0, 0, .2);
-    color: white;
-    border-radius: 10px ;
-    padding: 30px 40px;
-}
-.input{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
-}
-.input input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgb(255, 255, 255, .2);
-    border-radius: 40px;
-    font-size: 16px;
-    color: white;
-    padding: 20px 45px 20px 20px;
-}
-.input input::placeholder{
-    color: white;
-}
-.wrapper h1{
-    display: flex;
-    justify-content: center; 
-}
-.input i{
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-}
-.remem{
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
-}
-.remem label input {
-    accent-color: #fff;
-    margin-right: 1px;
-}
-.remem a{
-    color: #fff;
-}
-.remem a:hover{
-    text-decoration: underline;
-}
-button{
-    width: 100%;
-    height: 45px;
-    background: #fff;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
-}
-.wrapper .register{
-    font-size: 14.5px;
+.wrapper {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px 35px;
+    width: 380px;
     text-align: center;
-    margin: 20px 0 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.wrapper .register p a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
+
+h1 { margin-bottom: 30px; font-size: 32px; }
+
+.input, .input-group {
+    position: relative;
+    margin: 22px 0;
 }
-.wrapper .register p a:hover{
-    text-decoration: underline;
-}
-.input-group select {
+
+.input input, .input-group select {
     width: 100%;
     padding: 14px 14px 14px 50px;
     border: none;
     border-radius: 50px;
-    background: transparent;
-    border: 2px solid rgb(255, 255, 255, .2); 
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
     font-size: 16px;
     outline: none;
-    backdrop-filter: blur(5px);
-    appearance: none;
-    cursor: pointer;
+}
+
+.input i, .input-group i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
     color: white;
 }
+
 .input-group::after {
     content: '▼';
     position: absolute;
@@ -119,9 +59,11 @@ button{
     top: 50%;
     transform: translateY(-50%);
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     pointer-events: none;
 }
+
+select { appearance: none; cursor: pointer; }
 
 .gender-group {
     display: flex;
@@ -129,13 +71,16 @@ button{
     gap: 40px;
     margin: 25px 0;
 }
+
 .gender-label {
     display: flex;
     align-items: center;
     cursor: pointer;
     font-size: 16px;
 }
+
 .gender-label input { display: none; }
+
 .circle {
     width: 22px;
     height: 22px;
@@ -143,12 +88,13 @@ button{
     border-radius: 50%;
     margin-right: 8px;
     position: relative;
-    transition: 0.3s;
 }
+
 .gender-label input:checked + .circle {
     background: #00d0ff;
     border-color: #00d0ff;
 }
+
 .gender-label input:checked + .circle::after {
     content: '';
     position: absolute;
@@ -160,3 +106,28 @@ button{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.remem {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.remem a { color: #00d0ff; text-decoration: none; }
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #00d0ff, #007bff);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20
