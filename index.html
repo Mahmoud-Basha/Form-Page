@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>Enter your world</h1>
+            <div class="input">
+                <input type="text" placeholder="Username" 
+                required>
+                <i class='bx  bxs-user'></i>  
+            </div>
+            <div class="input">
+                <input type="email" placeholder="Email" 
+                required>
+                <i class='bx  bxs-envelope'></i> 
+            </div>
+<div class="input-group">
+    <select required>
+        <option value="" disabled selected>Choose planet</option>
+        <option value="mercury">عطارد - Mercury</option>
+        <option value="venus">الزهرة - Venus</option>
+        <option value="earth">الأرض - Earth</option>
+        <option value="mars">المريخ - Mars</option>
+        <option value="jupiter">المشتري - Jupiter</option>
+        <option value="saturn">زحل - Saturn</option>
+        <option value="uranus">أورانوس - Uranus</option>
+        <option value="neptune">نبتون - Neptune</option>
+    </select>
+    <i class='bx bxs-planet'></i> <!-- أيقونة الكوكب -->
+</div>
+<div class="gender-group">
+    <label class="gender-label">
+        <input type="radio" name="gender" value="male" checked>
+        <span class="circle"></span> Male
+    </label>
+    <label class="gender-label">
+        <input type="radio" name="gender" value="female">
+        <span class="circle"></span> Female
+    </label>
+</div>
+            <div class="remem">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot choise?</a>
+            </div>
+            <button>send</button>
+            <div class="register">
+                <p>Dont have an account?<a href="#">Register</a></p> 
+            </div>
+        </form>
+    </div>
+</body>
+</html>
